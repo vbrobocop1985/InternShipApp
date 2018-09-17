@@ -1,0 +1,99 @@
+﻿body {
+    background-color: #f5f5f7;
+}
+/*userList.jsp*/
+.header {
+    background-color:#2f609f;
+    margin:auto;
+    width:80%;
+    text-align:justify;
+}
+.header-panel {
+    display:inline-block;
+    vertical-align:bottom;
+    padding: 10px;
+}
+.header-panel.filter-user {
+    float: right;
+}
+.header-panel.add-user a:link, a:visited {
+    color: #ffffff;
+    text-decoration:none;
+    transition: all 0.3s;
+}
+.header-panel.add-user a:hover {
+    text-shadow: rgba(255,255,255,0.5) 0 3px 3px;
+}
+.content table{
+    margin:auto;
+    width:80%;
+    text-align:center;
+}
+.content table th, td  {
+    box-shadow:0 0 1px rgba(0, 0, 0, 0.80);
+}
+.content thead {
+    background-color:#b1aecc;
+}
+.content tbody {
+    background-color:#f0f1f3;
+}
+.content table a:link, a:visited {
+    text-decoration:none;
+    color:#5f7faf;
+}
+.content table a:hover {
+    text-decoration: underline;
+}
+.pagination {
+    background-color:#2f609f;
+    margin: auto;
+    overflow: auto;
+    width: 80%;
+    height: 25px;
+    text-align: center;
+    color: #000;
+}
+.pagination a:link {
+    color: #f5f9fa;
+    text-decoration:none;
+}
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+/*userForm.jsp*/
+.form-submit-button {
+    padding-top: 10px;
+}
+
+.form-content {
+    text-align: center;
+    width: 300px;
+    height: 180px;
+    border-radius: 5px;
+    border: 3px #000 solid;
+    background-color: #f5f5f7;
+    top: 50%; /* отступаем сверху 50%*/
+    left: 50%; /* половина экрана слева */
+    margin-top: -150px;
+    margin-left: -150px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты */
+    padding: 20px 10px;
+    opacity: 1; /* полностью прозрачно для анимирования */
+    z-index: 5; /* окно должно быть наиболее большем слое */
+    position: fixed; /* чтобы окно было в видимой зоне в любом месте */
+    /*display: none;*/
+}
+
+#review_form_overlay {
+    z-index: 3; /* подложка должна быть выше слоев элементов сайта, но ниже слоя модального окна */
+    position: fixed; /* всегда перекрывает весь сайт */
+    background-color: #2f609f;
+    opacity: 0.3; /* но немного прозрачна */
+    width: 100%;
+    height: 100%; /* размером во весь экран */
+    top: 0;
+    left: 0; /* сверху и слева 0, обязательные свойства! */
+    cursor: pointer;
+    /*display: none; !* в обычном состоянии её нет) *!*/
+}
